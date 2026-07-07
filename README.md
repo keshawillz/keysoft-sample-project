@@ -39,7 +39,7 @@ path so `from orders import ...` resolves from anywhere.
 
 ## What's here
 
-    src/orders/      the service — service.py is clean; api.py has drifted on purpose
+    src/orders/      the services
     tests/           pytest tests
     TASKS.md         your Tuesday / Wednesday / Thursday tasks
     .devcontainer/   Codespaces setup (venv + Claude Code pre-installed)

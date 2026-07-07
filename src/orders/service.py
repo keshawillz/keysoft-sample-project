@@ -1,9 +1,4 @@
-"""Order business logic.
-
-This module is the GOOD example of the house style: it uses the logger,
-type-hints its public functions, and raises domain errors instead of
-returning silent empty results. (api.py has drifted from this — see TASKS.md.)
-"""
+"""Order business logic."""
 import logging
 
 from orders import store
