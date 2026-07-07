@@ -1,0 +1,2 @@
+# Installs this project (editable, so `import orders` works) plus pytest.
+-e .[dev]
