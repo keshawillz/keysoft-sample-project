@@ -21,3 +21,21 @@ def cancel_order(order_id: str) -> Order:
     store.save(order)
     logger.info("cancelled order %s", order_id)
     return order
+
+
+def refund_order(order_id: str) -> Order:
+    """Refund a shipped order and return the updated order.
+
+    Raises KeyError if the order is unknown, ValueError if it can't be refunded
+    (only shipped orders are refundable, so this covers pending, cancelled and
+    already-refunded orders).
+    """
+    order = store.get(order_id)
+    if order is None:
+        raise KeyError(f"unknown order: {order_id}")
+    if order.status != "shipped":
+        raise ValueError(f"cannot refund a {order.status} order")
+    order.status = "refunded"
+    store.save(order)
+    logger.info("refunded order %s for %.2f USD", order_id, order.total_usd)
+    return order
