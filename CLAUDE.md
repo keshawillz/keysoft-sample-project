@@ -1,0 +1,2 @@
+- Use the logging logger for diagnostics; never print().
+- Type-hint every public function.

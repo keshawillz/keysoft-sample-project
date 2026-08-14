@@ -15,6 +15,7 @@
     }
   },
   "remoteEnv": {
-    "ANTHROPIC_API_KEY": "${localEnv:ANTHROPIC_API_KEY}"
+    "ANTHROPIC_API_KEY": "${localEnv:ANTHROPIC_API_KEY}",
+    "X_GITHUB_PAT": "${localEnv:X_GITHUB_PAT}"
   }
 }
